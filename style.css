@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*,
+::after,
+::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    position: relative;
+    background: #131414;
+    font-family: 'Poppins', sans-serif;
+}
+
+[data-aos="show"] {
+    opacity: 0;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+[data-aos="show"].aos-animate {
+    opacity: 1;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0);
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+
+/*
+// Header
+//  --------------------------------------------- */
+.cd_header {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+
+.navbar {
+    width: 100%;
+    overflow: auto;
+}
+
+.nav-logo img {
+    width: 100%;
+    max-width: 85px;
+    height: auto;
+}
+
+.navbar a {
+    float: left;
+    /* padding: 12px; */
+    text-decoration: none;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+
+/*
+//  Hero
+//  --------------------------------------------- */
+.cd_hero {
+    flex-direction: column;
+    position: relative;
+    /* top: 35px; */
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(76,9,121,1) 44%, rgba(42,14,61,1) 85%); 
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    -webkit-transition: .6s all ease-in-out;
+    -o-transition: .6s all ease-in-out;
+    transition: .6s all ease-in-out;
+    padding: 0 20px;
+}
+
+.cd_hero__background {
+    top: 0px;
+    -o-top: 35px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    min-height: 100%;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-animation-name: changeHero;
+    animation-name: changeHero;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+}
+
+.cd_hero__content {
+    color: #fff;
+    position: relative;
+}
+
+.cd_hero__logo {
+    display: none;
+}
+
+.cd_hero__logo img {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cd_hero__title {
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 65px;
+    letter-spacing: 3.57px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.cd_hero__title h2 {
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.cd_hero__title,
+.cd_hero__date {
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+.wrap {
+    text-align: center;
+    position: relative;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.wrap:before {
+
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-top: 1px solid black;
+    background: black;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.cd_hero__countdown__wrapper {
+    text-align: center;
+    margin: 15px;
+    position: relative;
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.cd_hero__arrow_container {
+    position: absolute;
+    top: 88%;
+}
+
+.link::before {
+    content: '';
+    position: relative;
+    top: 50%;
+    left: 0;
+    border-top: 1px solid black;
+    background: black;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+
+.cd_hero__countdown__date_container {
+    background-color: rgba(38, 38, 38, 0.7);
+    border-radius: 9px;
+    justify-content: space-between;
+    border-color: #fc4500;
+    border-style: solid;
+    border-width: 1px;
+    height: 87px;
+    vertical-align: middle;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+.cd_hero__countdown__dates.days-number {
+    font-size: 75px;
+}
+
+.cd_hero__countdown__dates {
+    margin: 11px 4px 0 15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 10.06px;
+    text-align: center;
+    color: #fff;
+    line-height: normal;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.cd_hero__date {
+    /* margin: 15px 0px 0px; */
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+    color: #d8d8d8;
+    letter-spacing: 0.8px;
+    text-align: center;
+    line-height: 24px;
+    font-family: 'Poppins', sans-serif;
+    vertical-align: middle;
+}
+
+.cd_hero__countdown__date_label.days-label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cd_hero__countdown__date_label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 2.2px;
+    text-align: center;
+    color: #fff;
+    margin: 10px;
+}
+
+
+.btn-container {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #fc6100; */
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+    -ms-animation: fadeIn ease 2s;
+}
+
+button {
+    width: 325px;
+    height: 60px;
+    border: 0;
+    position: relative;
+    min-width: 325px;
+    min-height: 60px;
+    border-radius: 60px;
+    color: #262626b3;
+    font-weight: 800;
+    background: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+    transition: .3s ease-in-out all;
+}
+
+button:hover {
+    color: #fff;
+}
+
+button .text,
+button .icon-container {
+    position: relative;
+    z-index: 2;
+}
+
+button .icon-container {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    transition: transform 500ms ease;
+}
+
+button .icon-container .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    transition: transform 500ms ease, opacity 250ms ease;
+}
+
+button .icon-container .icon--left {
+    transform: translateX(-200%);
+    opacity: 0;
+}
+
+button .icon-container .icon svg {
+    width: 100%;
+    height: 100%;
+    fill: #262626b3;
+}
+
+button:hover .icon-container .icon svg {
+    fill: #ffffff !important;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(254, 204, 13);
+    border-radius: 60px;
+    z-index: 1;
+    transition: transform 500ms ease;
+}
+
+button:hover::after {
+    transform: translateX(80%);
+}
+
+button:hover .icon-container {
+    transform: translateX(75%);
+}
+
+button:hover .icon-container .icon--left {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+button:hover .icon-container .icon--right {
+    transform: translateX(200%);
+    opacity: 0;
+}
+
+
+
+/*
+//  Desktop
+//  --------------------------------------------- */
+@media screen and (min-width: 1024px) {
+    .page-header .header.panel {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        max-width: 1392px;
+        padding: 10px 20px;
+        background-color: #101820;
+    }
+
+    .cd_header {
+        padding: 25px 25px 0;
+    }
+}
+
+
+/*
+//  Mobile
+//  --------------------------------------------- */
+@media screen and (max-width: 1024px) {
+    .cd_header {
+        padding: 15px 25px;
+    }
+
+    .cd_hero__background {
+        -webkit-animation-name: changeHero-mobile;
+        animation-name: changeHero-mobile;
+    }
+
+    .cd_hero__title {
+        font-size: 25px;
+        letter-spacing: 3.57px;
+        margin: 50px 0 30px;
+    }
+
+
+    .cd_hero__countdown__wrapper {
+        margin-right: 15px !important;
+        margin: 0px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    button {
+        width: 245px;
+        height: 50px;
+        position: relative;
+        min-width: 245px;
+        min-height: 50px;
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+    }
+
+    button .icon-container .icon {
+        transition: unset !important;
+    }
+
+    button:hover .icon-container .icon svg {
+        color: unset !important;
+        fill: unset !important;
+    }
+
+    button:hover {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+        color: unset !important;
+    }
+
+    button::after {
+        -webkit-transition: unset !important;
+        -moz-transition: unset !important;
+        -o-transition: unset !important;
+        -ms-transition: unset !important;
+        transition: unset !important;
+    }
+
+    button:hover::after {
+        transform: unset !important;
+    }
+
+    button:hover .icon-container {
+        transform: unset !important;
+    }
+
+    button:hover .icon-container .icon--left {
+        transform: unset !important;
+    }
+
+    button:hover .icon-container .icon--right {
+        transform: unset !important;
+    }
+
+
+    button .text,
+    button .icon-container {
+        font-size: 11.2px;
+    }
+
+    button:hover::after {
+        transform: translateX(81%);
+    }
+
+    button:hover .icon-container {
+        transform: translateX(10%);
+    }
+
+    .cd_hero {
+        padding: 0 20px;
+    }
+
+    .cd_header {
+        display: none;
+    }
+
+    .cd_hero__date {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .cd_hero__countdown__dates {
+        margin: 6px 5px 4px 7px;
+        transform: translateX(4px);
+    }
+
+    .cd_hero__countdown__dates {
+        font-size: 25px;
+    }
+
+    .cd_hero__logo {
+        display: block;
+    }
+
+    .cd_hero__logo img {
+        max-width: 65px;
+    }
+
+    .cd_hero__countdown {
+        /* margin: 0 auto !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 0; */
+        display: none;
+    }
+
+    .cd_hero__background {
+        -webkit-animation-name: changeHero-mobile;
+        animation-name: changeHero-mobile;
+    }
+
+    .cd_hero__title {
+        font-size: 22px;
+        letter-spacing: 2.86px;
+        margin: 20px 0 15px;
+    }
+
+    .cd_hero__countdown__date_container {
+        height: 65px;
+    }
+
+    .cd_hero__countdown__dates.days-number {
+        font-size: 60px;
+    }
+
+    .btn-container {
+        margin-top: 15px;
+    }
+
+    .cd_hero__countdown__date_label {
+        font-size: 12px;
+    }
+}
